@@ -2,5 +2,37 @@
 name = "rust_vpn"
 version = "0.1.0"
 edition = "2021"
+authors = ["Ebenezer Sam-Oladapo <mrsamoladapo@gmail.com>"]
+description = "A WireGuard-like VPN implementation with AI enhancements"
+
 
 [dependencies]
+# Core functionality
+tokio = { version = "1.28", features = ["full"] }  # Async runtime
+clap = { version = "4.3", features = ["derive"] }  # CLI argument parsing
+config = "0.13"                                     # Configuration management
+serde = { version = "1.0", features = ["derive"] }  # Serialization
+serde_json = "1.0"                                  # JSON support
+
+# Networking
+socket2 = "0.5"                                    # Low-level socket operations
+tun-tap = "0.1"                                    # TUN/TAP device interface
+packet = "0.1"                                     # Packet parsing
+trust-dns-resolver = "0.22"                        # DNS resolution
+
+# Cryptography
+x25519-dalek = "2.0"                               # Key exchange
+chacha20poly1305 = "0.10"                          # ChaCha20-Poly1305 AEAD
+blake2 = "0.10"                                    # Blake2 hashing
+rand = "0.8"                                       # Random number generation
+
+# Logging & Monitoring
+tracing = "0.1"                                    # Logging framework
+tracing-subscriber = "0.3"                         # Logging implementation
+
+# For AI components (will expand later)
+ndarray = "0.15"                                   # N-dimensional arrays
+linfa = "0.6"                                      # Machine learning framework
+
+[dev-dependencies]
+tempfile = "3.6"                                   # Temporary file creation for tests
