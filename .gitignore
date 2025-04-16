@@ -1,0 +1,46 @@
+# === Rust build artifacts ===
+/target/
+**/*.rs.bk
+
+# === Cargo-related ===
+Cargo.toml.orig
+
+Cargo.lock
+
+# === IDE: JetBrains / RustRover ===
+.idea/
+*.iml
+*.iws
+*.ipr
+/out/
+
+# === Editor & OS junk ===
+.DS_Store
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+# === Logs ===
+*.log
+
+# === Node-related (if using WASM etc.) ===
+node_modules/
+pkg/
+
+# === Docker ===
+*.tar
+**/docker-compose.override.yml
+.docker/
+docker-compose.override.yml
+docker-compose*.yml
+Dockerfile*
+.dockerignore
+
+# === VSCode (optional, if you use it sometimes) ===
+.vscode/
+
+# === Env files (if using dotenv etc.) ===
+.env
+.env.*
