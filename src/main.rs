@@ -1,5 +1,6 @@
 mod cli;
 mod config;
+mod encryption;
 
 use tracing::{info, error};
 use tracing_subscriber::FmtSubscriber;
